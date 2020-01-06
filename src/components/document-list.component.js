@@ -14,14 +14,17 @@ export default class DocumentList extends React.Component {
 
 	componentDidMount() {
 		const url = 'https://dev1.chili-publish.com/CHILI/rest-api/v1/resources/Documents/treelevel?parentFolder=templates&numLevels=1';
-		// const proxyurl = 'http://crossorigin.me/'
+		// const proxyurl = 'https://cors-anywhere.herokuapp.com/'
 		// const params = {
 		// 	'parentFolder': 'templates',
 		// 	'numLevels': 1
 		// }
 		const headers = {
   			headers: {
+  				'Access-Control-Allow-Origin': '*',
   				// 'Content-Type': 'application/xml;charset=utf-8',
+  				'Access-Control-Allow-Methods': 'GET',
+  				'Access-Control-Allow-Headers': 'get',
     			'Accept': 'application/xml',
     			'API-KEY': 'testKey1234=',
   			}
