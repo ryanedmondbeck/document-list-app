@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import xmlparser from 'react-xml-parser';
+// import xmlparser from 'react-xml-parser';
 
 export default class DocumentList extends React.Component {
 	
@@ -14,10 +14,10 @@ export default class DocumentList extends React.Component {
 
 	componentDidMount() {
 		const url = 'https://dev1.chili-publish.com/CHILI/rest-api/v1/resources/Documents/treelevel?parentFolder=templates&numLevels=1';
-		const params = {
-			'parentFolder': 'templates',
-			'numLevels': 1
-		}
+		// const params = {
+		// 	'parentFolder': 'templates',
+		// 	'numLevels': 1
+		// }
 		const headers = {
   			headers: {
     			'Accept': 'application/xml',
@@ -30,6 +30,12 @@ export default class DocumentList extends React.Component {
 				// const documents = res.data;
 				console.log(res.data);
 			})	
+
+		// // send a get request using fetch
+		// fetch(url, { method: 'GET', headers })
+		// 	.then(res => {
+		// 		console.log(res.data);	
+		// 	})
 	}
 
   	render() {
