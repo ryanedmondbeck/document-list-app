@@ -14,12 +14,14 @@ export default class DocumentList extends React.Component {
 
 	componentDidMount() {
 		const url = 'https://dev1.chili-publish.com/CHILI/rest-api/v1/resources/Documents/treelevel?parentFolder=templates&numLevels=1';
+		// const proxyurl = 'http://crossorigin.me/'
 		// const params = {
 		// 	'parentFolder': 'templates',
 		// 	'numLevels': 1
 		// }
 		const headers = {
   			headers: {
+  				// 'Content-Type': 'application/xml;charset=utf-8',
     			'Accept': 'application/xml',
     			'API-KEY': 'testKey1234=',
   			}
@@ -30,12 +32,8 @@ export default class DocumentList extends React.Component {
 				// const documents = res.data;
 				console.log(res.data);
 			})	
+			.catch(() => console.log("Can’t access " + url + " response."))
 
-		// // send a get request using fetch
-		// fetch(url, { method: 'GET', headers })
-		// 	.then(res => {
-		// 		console.log(res.data);	
-		// 	})
 	}
 
   	render() {
